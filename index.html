@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Lava Lamp</title>
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
+    </filter>
+      
+      <!-- wall grad -->
+      <radialGradient id="wall-gradient" cx="50%" cy="46.5459706%" fx="50%" fy="46.5459706%" r="60.3589696%" gradientTransform="translate(0.500000,0.465460),scale(0.810000,1.000000),rotate(90.000000),scale(1.000000,0.720012),translate(-0.500000,-0.465460)">
+        <stop stop-color="#6E1111" offset="0%"></stop>
+        <stop stop-color="#292929" offset="100%"></stop>
+      </radialGradient>
+      
+      <!-- lamp glass -->
+      <clipPath id="glassMask">
+        <polygon id="glassShape" points="42 48 128 48 170 289 3.53883589e-15 289"></polygon>
+      </clipPath>
+      
+      <!-- table grad -->
+      <radialGradient id="table-gradient" cx="50.8678385%" cy="31.3390899%" fx="50.8678385%" fy="31.3390899%" r="84.9540844%" gradientTransform="translate(0.508678,0.313391),scale(0.190000,1.000000),rotate(90.000000),scale(1.000000,2.123427),translate(-0.508678,-0.313391)">
+        <stop stop-color="#561313" offset="0%"></stop>
+        <stop stop-color="#000000" offset="100%"></stop>
+      </radialGradient>
+      
+      <!-- top grad -->
+      <linearGradient id="top-gradient" x1="50%" y1="0%" x2="50%" y2="100%">
+        <stop stop-color="#0D035B" offset="0%"></stop>
+        <stop stop-color="#6A0202" offset="100%"></stop>
+      </linearGradient>
+      <!-- bottom grad -->
+      <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="bottom-gradient">
+        <stop stop-color="#6A0202" offset="0%"></stop>
+        <stop stop-color="#0D035B" offset="100%"></stop>
+      </linearGradient>
+      <!-- blob grads -->
+      <radialGradient id="blob2-gradient" cx="50%" cy="23.2493259%" fx="50%" fy="23.2493259%" r="77.5921192%" gradientTransform="translate(0.500000,0.232493),scale(0.794571,1.000000),rotate(-90.000000),scale(1.000000,0.887436),translate(-0.500000,-0.232493)">
+        <stop stop-color="#FC6565" offset="0%"></stop>
+        <stop stop-color="#F3F5C2" offset="100%"></stop>
+      </radialGradient>
+      <radialGradient cx="50%" cy="32.0247124%" fx="50%" fy="32.0247124%" r="71.2552084%" gradientTransform="translate(0.500000,0.320247),scale(0.853213,1.000000),rotate(145.328185),scale(1.000000,0.781136),translate(-0.500000,-0.320247)" id="blob3-gradient">
+        <stop stop-color="#FC6565" offset="0%"></stop>
+        <stop stop-color="#F3F5C2" offset="100%"></stop>
+      </radialGradient>
+      <radialGradient cx="38.3219581%" cy="28.1603083%" fx="38.3219581%" fy="28.1603083%" r="88.8058099%" gradientTransform="translate(0.383220,0.281603),scale(1.000000,0.837841),rotate(92.464548),scale(1.000000,0.781136),translate(-0.383220,-0.281603)" id="blob5-gradient">
+        <stop stop-color="#FC6565" offset="0%"></stop>
+        <stop stop-color="#F3F5C2" offset="100%"></stop>
+      </radialGradient>
+      <radialGradient cx="64.971462%" cy="27.1448909%" fx="64.971462%" fy="27.1448909%" r="106.039728%" gradientTransform="translate(0.649715,0.271449),scale(1.000000,0.774651),rotate(116.489140),scale(1.000000,0.525420),translate(-0.649715,-0.271449)" id="blob1-gradient">
+        <stop stop-color="#FA7979" offset="0%"></stop>
+        <stop stop-color="#F3F5C2" offset="100%"></stop>
+      </radialGradient>
+      <radialGradient cx="50%" cy="16.5514147%" fx="50%" fy="16.5514147%" r="96.411391%" gradientTransform="translate(0.500000,0.165514),scale(0.294684,1.000000),rotate(90.000000),scale(1.000000,3.004770),translate(-0.500000,-0.165514)" id="blob4-gradient">
+        <stop stop-color="#FA7979" offset="0%"></stop>
+        <stop stop-color="#F3F5C2" offset="100%"></stop>
+      </radialGradient>
+      <!-- end blob grads -->
+  </defs>
+  
+  <!-- lamp shapes -->  
+        <rect id="table" fill="url(#table-gradient)" x="0" y="486" width="600" height="114"></rect>
+        <rect id="wall" fill="url(#wall-gradient)" x="0" y="0" width="600" height="486"></rect>
+        <g id="Lamp" transform="translate(215.000000, 87.000000)">
+          <use xlink:href="#glassShape" fill="red" opacity="0.2"/>
+          <polygon id="top" fill="url(#top-gradient)" points="120 0 128.304 48 41.696 48 50 0"></polygon>
+          <path id="bottom" d="M0,289 L170,289 C170,339.666667 141.666667,365 85,365 C28.3333333,365 0,339.666667 0,289 Z" fill="url(#bottom-gradient)"></path>
+          <path id="base" d="M128,358 L170,414 C141.666667,423.333333 113.333333,428 85,428 C56.6666667,428 28.3333333,423.333333 0,414 L42,358 L128,358 Z" fill="#0D035B"></path>
+        
+        <g id="blobs" clip-path="url(#glassMask)" filter="url(#goo)">
+          <path id="blob1" d="M77.7347627,10.5438822 C91.8159148,8.30369894 106.734763,12.5438822 112.734763,31.5438822 C118.734763,50.5438822 95.7347627,49.5438822 90.7347627,57.5438822 C85.7347627,65.5438822 86.7347627,93.5438822 77.7347627,95.5438822 C68.7347627,97.5438822 50.7347627,93.5438822 47.7347627,74.5438822 C44.7347627,55.5438822 52.7347627,51.5438822 63.7347627,47.5438822 C74.7347627,43.5438822 63.6536105,12.7840655 77.7347627,10.5438822 Z" fill="url(#blob1-gradient)" transform="translate(80.412453, 53.004254) rotate(-24.000000) translate(-80.412453, -53.004254) "></path>
+          <path id="blob2" d="M70.7757066,36.9337662 C90.7757066,29.9337662 115.775707,42.9337662 111.775707,59.9337662 C107.775707,76.9337662 97.7757066,85.9337662 81.7757066,85.9337662 C65.7757066,85.9337662 57.3909433,85.9318234 50.6191382,73.0382519 C43.847333,60.1446803 50.7757066,43.9337662 70.7757066,36.9337662 Z" fill="url(#blob2-gradient)" transform="translate(80.150276, 60.466883) rotate(-18.000000) translate(-80.150276, -60.466883)"></path>
+          <path id="blob3" d="M72.3047474,29.4527328 C95.6761212,25.480468 111.202042,29.4736834 116.053347,43.6675145 C120.904652,57.8613457 97.0451157,96.7616956 78.8242197,96.7616956 C60.6033238,96.7616956 45.5685452,88.6697507 37.8567729,73.9874052 C30.1450006,59.3050598 48.9333736,33.4249976 72.3047474,29.4527328 Z" fill="url(#blob3-gradient)" transform="translate(76.394886, 62.380848) rotate(15.000000) translate(-76.394886, -62.380848)"></path>
+          <path id="blob4" d="M1.09916245,335 C6.09916245,319 29.0991625,313 63.0991625,313 C97.0991625,313 116.099162,331 129.099162,331 C142.099162,331 156.099162,333 156.099162,343 C156.099162,353 98.0991625,359 80.0991625,359 C62.0991625,359 33.0991625,359 21.0991625,355 C9.09916245,351 -3.90083755,351 1.09916245,335 Z"  fill="url(#blob4-gradient)"></path>
+          <path id="blob5" d="M68.8226849,24.3369934 C92.1940586,20.3647286 110.530268,52.5373835 115.381572,66.7312146 C120.232877,80.9250458 89.207045,109.685218 70.9861491,109.685218 C52.7652531,109.685218 55.0116667,86.1974003 47.2998944,71.5150549 C39.5881221,56.8327095 45.4513111,28.3092582 68.8226849,24.3369934 Z" fill="url(#blob5-gradient)" transform="translate(79.994458, 66.842609) rotate(15.000000) translate(-79.994458, -66.842609)"></path>          
+        </g>
+    </g>
+</svg>
